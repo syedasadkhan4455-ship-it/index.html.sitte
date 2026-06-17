@@ -1,19 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Payment</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f1f1f1;
+}
 
-<h1>Payment Methods</h1>
+.box {
+    margin-top: 100px;
+}
 
-<p>JazzCash: 03XXXXXXXXX</p>
-<p>Easypaisa: 03XXXXXXXXX</p>
+h1 {
+    color: #333;
+}
 
-<input placeholder="Enter Transaction ID"><br><br>
+input, select {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+}
 
-<button onclick="alert('Payment Submitted')">Submit Payment</button>
+button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-</body>
-</html>
+a {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+}
