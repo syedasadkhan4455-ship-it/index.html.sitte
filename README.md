@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Order</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Dashboard</h1>
+<h1>Place Order</h1>
 
-<a href="order.html">Place Order</a>
-<a href="payment.html">Payment Methods</a>
-<a href="index.html">Logout</a>
+<select>
+    <option>Instagram Followers</option>
+    <option>YouTube Views</option>
+    <option>TikTok Likes</option>
+</select>
+
+<br><br>
+
+<input placeholder="Profile / Link"><br><br>
+
+<button onclick="placeOrder()">Submit Order</button>
+
+<script>
+function placeOrder(){
+    alert("Order Placed Successfully ✔️");
+}
+</script>
 
 </body>
 </html>
