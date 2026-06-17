@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Order</title>
+    <title>Payment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Place Order</h1>
+<h1>Payment Methods</h1>
 
-<select>
-    <option>Instagram Followers</option>
-    <option>YouTube Views</option>
-    <option>TikTok Likes</option>
-</select>
+<p>JazzCash: 03XXXXXXXXX</p>
+<p>Easypaisa: 03XXXXXXXXX</p>
 
-<br><br>
+<input placeholder="Enter Transaction ID"><br><br>
 
-<input placeholder="Profile / Link"><br><br>
-
-<button onclick="placeOrder()">Submit Order</button>
-
-<script>
-function placeOrder(){
-    alert("Order Placed Successfully ✔️");
-}
-</script>
+<button onclick="alert('Payment Submitted')">Submit Payment</button>
 
 </body>
 </html>
