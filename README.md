@@ -1,3 +1,9 @@
-<h1>Dashboard</h1>
+import { db } from "./firebase";
+import { collection, addDoc } from "firebase/firestore";
 
-<button onclick="logout()">Logout</button>
+export async function addUser() {
+  await addDoc(collection(db, "users"), {
+    name: "User",
+    time: new Date()
+  });
+}
