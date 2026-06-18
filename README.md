@@ -1,6 +1,9 @@
-<h2>Login</h2>
+import { auth } from "./firebase";
+import { signOut } from "firebase/auth";
 
-<input id="email" placeholder="Email" />
-<input id="password" placeholder="Password" />
-
-<button onclick="login()">Login</button>
+export function logout() {
+  signOut(auth).then(() => {
+    alert("Logged out");
+    window.location.href = "/";
+  });
+}
