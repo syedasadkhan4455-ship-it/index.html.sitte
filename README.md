@@ -1,17 +1,16 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { auth } from "./firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
-};
+export function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
 
-const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      alert("Login successful");
+      window.location.href = "/dashboard";
+    })
+    .catch((err) => {
+      alert(err.message);
+    });
+}
