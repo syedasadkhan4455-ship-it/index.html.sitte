@@ -1,9 +1,3 @@
-import { auth } from "./firebase";
-import { signOut } from "firebase/auth";
+<h1>Dashboard</h1>
 
-export function logout() {
-  signOut(auth).then(() => {
-    alert("Logged out");
-    window.location.href = "/";
-  });
-}
+<button onclick="logout()">Logout</button>
