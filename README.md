@@ -1,16 +1,6 @@
-import { auth } from "./firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+<h2>Login</h2>
 
-export function login() {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+<input id="email" placeholder="Email" />
+<input id="password" placeholder="Password" />
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      alert("Login successful");
-      window.location.href = "/dashboard";
-    })
-    .catch((err) => {
-      alert(err.message);
-    });
-}
+<button onclick="login()">Login</button>
